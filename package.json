@@ -1,0 +1,23 @@
+{
+  "name": "avahotspot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tintounn/AvaHotspot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tintounn/AvaHotspot/issues"
+  },
+  "homepage": "https://github.com/tintounn/AvaHotspot#readme",
+  "dependencies": {
+    "libnmap": "^0.4.5",
+    "socket.io-client": "^2.0.4"
+  }
+}
