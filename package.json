@@ -18,6 +18,8 @@
   "homepage": "https://github.com/tintounn/AvaHotspot#readme",
   "dependencies": {
     "libnmap": "^0.4.5",
-    "socket.io-client": "^2.0.4"
+    "matrix-protos": "0.0.20",
+    "socket.io-client": "^2.0.4",
+    "zmq": "^2.15.3"
   }
 }

@@ -1,5 +1,7 @@
 const Socket = require('socket.io-client');
+
 const VlcPlayer = require('./lib/vlc.lib');
+const Everloop = require('./lib/everloop.lib');
 
 class AvaHotSpot {
   constructor() {
@@ -20,7 +22,8 @@ class AvaHotSpot {
       await this.setupHandlers();
 
       this.player = new VlcPlayer(false);
-      this.play("http://cdn.nrjaudio.fm/adwz1/fr/30043/mp3_128.mp3?origine=fluxradios");
+      this.everloop = new Everloop();
+      //this.play("http://cdn.nrjaudio.fm/adwz1/fr/30043/mp3_128.mp3?origine=fluxradios");
 
       console.log('Hotspot started !');
     } catch(err) {
@@ -39,7 +42,7 @@ class AvaHotSpot {
   connect() {
     return new Promise((resolve, reject) => {
       this.socket = Socket('http://127.0.0.1:8002/', {
-        reconnection: false
+        reconnection: false,
       });
       this.socket.on('connect', () => resolve());
       this.socket.on('connect_timeout', () => reject());
